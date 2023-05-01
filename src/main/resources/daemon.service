@@ -1,0 +1,13 @@
+[Unit]
+Description=UMS demo service
+After=multi-user.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+ExecStart=/usr/bin/bash /root/.scripts/ums-runner.sh
+
+[Install]
+WantedBy=multi-user.target
